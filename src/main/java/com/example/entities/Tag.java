@@ -27,7 +27,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
+// tutorials se excluye para evitar la recursion infinita Tag -> Tutorial -> Tag
+@ToString(exclude = "tutorials")
 @Builder
 public class Tag implements Serializable {
 
